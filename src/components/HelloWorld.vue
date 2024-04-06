@@ -100,8 +100,7 @@ const nextQuote = () => {
 </script>
 
 <template>
-  <div style="display: inline-flex">
-    <h2>{{ msg }}</h2>
+  <div class="quotes-panel">
     <div class="card">
       <button type="button" @click="nextQuote" class="next-btn">
         Next <span>⏭️</span>
@@ -118,11 +117,15 @@ const nextQuote = () => {
 </template>
 
 <style scoped>
+.quotes-panel {
+  display: flex;
+  text-align: center;
+}
 .read-the-docs {
   color: #888;
 }
 .card {
-  margin: 0.3em;
+  /* margin: 0.3em; */
   padding: 1em;
   height: 100vh;
   width: 100%;
@@ -134,12 +137,10 @@ const nextQuote = () => {
   border-radius: 0.25em;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 0.4em;
 }
 .next-btn {
   padding: 0.1em 1em;
-  margin-inline: 0.3em;
-  margin-top: 1.5em;
   margin-bottom: 1em;
   border: 1px solid #ccc;
   border-radius: 0.25em;
@@ -147,8 +148,5 @@ const nextQuote = () => {
   color: #fff;
   cursor: pointer;
   height: 3em;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
 }
 </style>
