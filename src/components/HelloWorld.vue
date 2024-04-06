@@ -100,10 +100,12 @@ const nextQuote = () => {
 </script>
 
 <template>
-  <div>
-    <h1>{{ msg }}</h1>
-    <button type="button" @click="nextQuote" class="next-btn">Next</button>
+  <div style="display: inline-flex">
+    <h2>{{ msg }}</h2>
     <div class="card">
+      <button type="button" @click="nextQuote" class="next-btn">
+        Next <span>⏭️</span>
+      </button>
       <blockquote v-if="currentQuote">
         <q>{{ currentQuote.text_ar }}</q>
         <br />
@@ -120,9 +122,10 @@ const nextQuote = () => {
   color: #888;
 }
 .card {
-  margin: 1em;
+  margin: 0.3em;
   padding: 1em;
   height: 100vh;
+  width: 100%;
 }
 .card blockquote {
   font-size: 1.5em;
@@ -134,12 +137,18 @@ const nextQuote = () => {
   padding: 0;
 }
 .next-btn {
-  padding: 0.5em 1em;
-  margin: 1em;
+  padding: 0.1em 1em;
+  margin-inline: 0.3em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
   border: 1px solid #ccc;
   border-radius: 0.25em;
   background-color: #3d3d3d;
   color: #fff;
   cursor: pointer;
+  height: 3em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
 }
 </style>

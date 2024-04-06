@@ -3,18 +3,19 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <div>
+  <div style="display: flex">
     <a href="https://asemalsaiyadi.onrender.com" target="_blank">
       <img src="/src/assets/logo-dark.png" class="logo" alt="Vite logo" />
+      <h3>Islamic Quotes</h3>
     </a>
+    <HelloWorld />
   </div>
-  <HelloWorld msg="Islamic Quotes" />
 </template>
 
 <style scoped>
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 8em;
+  padding: 0em;
   will-change: filter;
   transition: filter 300ms;
 }
